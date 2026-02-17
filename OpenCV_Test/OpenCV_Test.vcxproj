@@ -130,7 +130,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="E1_Dimensiones.cpp" />
+    <ClCompile Include="E2_Resize.cpp" />
+    <ClCompile Include="E3_Dibujo.cpp" />
+    <ClCompile Include="E4_Camara.cpp" />
     <ClCompile Include="OpenCV_Test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ejercicios.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

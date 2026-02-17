@@ -1,29 +1,28 @@
-// Opencv_Test.cpp : This file contains the 'main' function. Program execution begins and ends there.
-
 #include <opencv2/opencv.hpp>
 #include <iostream>
+#include "Ejercicios.h"
 
-using namespace cv;
 using namespace std;
-
-/*
-    Codigo de prueba para verificar la instalación y configuracion de OpenCV
-*/
 
 int main() {
 
-    Mat img_resized;
-    Mat img = imread("../img/LogoOpenCV.jpg"); // coloca una imagen en la carpeta del proyecto
-    resize(img, img_resized, Size(636, 316));  // redimensionar
+    int opcion;
 
-    if (img.empty()) {
-        cout << "No se pudo cargar la imagen" << std::endl;
-        return -1;
+    cout << "===== OpenCV - Ejercicios =====\n";
+    cout << "1) Mostrar dimensiones\n";
+    cout << "2) Resize (1024x1024)\n";
+    cout << "3) Dibujar figuras y texto\n";
+    cout << "4) Camara (video + grises)\n";
+    cout << "Elige opcion (1-4): ";
+    cin >> opcion;
+
+    switch (opcion) {
+    case 1: ejercicio1_dimensiones(); break;
+    case 2: ejercicio2_resize(); break;
+    case 3: ejercicio3_dibujo(); break;
+    case 4: ejercicio4_camara(); break;
+    default: cout << "Opcion no valida\n"; break;
     }
 
-    imshow("Imagen Original", img);
-    imshow("Imagen de prueba", img_resized);
-
-    waitKey(0);
     return 0;
 }
